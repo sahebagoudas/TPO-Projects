@@ -10,5 +10,7 @@ public interface StudentFetchService {
 	List<Student> findByDegreeDiplomaAndYear(String degreeDiploma, Integer year);
 	List<Student> findByDegreeDiploma(String degreeDiploma);
 	List<Student> findByYear(Integer year);
+	public boolean deleteStudent(Student student);
+	List<Student> getStudentById(Student student);
 
 }

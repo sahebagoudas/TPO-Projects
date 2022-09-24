@@ -38,6 +38,22 @@ public class StudentFetchServiceImpl implements StudentFetchService{
 		return studentFetchRepository.findByYear(year);
 	}
 
-
+	public boolean deleteStudent(Student student) {
+		
+		boolean status=false;
+		
+		try {
+			studentFetchRepository.deleteById(student.getId());
+			status = true;
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return status;
+	}
+	
+	public List<Student> getStudentById(Student student){
+		return studentFetchRepository.getStudentById(student.getId());
+	}
 
 }

@@ -14,5 +14,7 @@ public interface StudentFetchRepository extends JpaRepository<Student, Long>{
 	List<Student> findByDegreeDiplomaAndYear(String degreeDiploma, Integer year);
 	List<Student> findByDegreeDiploma(String degreeDiploma);
 	List<Student> findByYear(Integer year);
+	void deleteById(Long id);
+	List<Student> getStudentById(Long id);
 	
 }
