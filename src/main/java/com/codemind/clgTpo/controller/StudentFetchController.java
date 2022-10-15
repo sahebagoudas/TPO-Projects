@@ -40,7 +40,7 @@ public class StudentFetchController {
 		return studentFetchService.findByDegreeDiplomaAndYear(degreeDiploma, year);
 	}
 	
-	@DeleteMapping("delete-student/{student_id}")
+	@DeleteMapping("delete-student/student_id")
 	public boolean deleteStudent(@PathVariable("student_id") long student_id, Student student) {
 		student.setId(student_id);
 		return studentFetchService.deleteStudent(student);
